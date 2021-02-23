@@ -1,12 +1,19 @@
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View,Button ,Alert} from 'react-native';
+import Input from './components/Input';
+import Password from'./components/Password';
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
+      <Text>Welcome to my MyApp</Text>
+      <Input />
+      <Password/>
+      <Button
+        title="Submit"
+        onPress={() => alert('Simple Button pressed')}
+      />
     </View>
   );
 }
@@ -18,4 +25,5 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
+
 });
